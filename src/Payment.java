@@ -1,6 +1,9 @@
-public interface Payment {
-    public int paymentId=0;
-    public double amount = 0;
+public abstract class Payment {
+    String discreption = "UnEnitialized Payment";
 
-    public void pay();
+    public String getDiscreption() {
+        return discreption;
+    }
+
+    public abstract void pay();
 }

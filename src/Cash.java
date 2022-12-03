@@ -1,6 +1,11 @@
-public class Cash implements Payment{
-    public void pay()
-    {
+public class Cash extends Payment {
+
+    Cash() {
+        discreption = " Cash payment";
+    }
+
+    public void pay() {
         System.out.println("You can pay by cash technique");
     }
+
 }
