@@ -1,13 +1,26 @@
 public class OverallDiscount extends Discount {
     Payment p;
+    float discount = 10;
 
-    OverallDiscount(Payment p) {
+    public void addDiscount(float dis) {
+        this.discount = dis;
+    }
+
+    public void setPayment(Payment p) {
         this.p = p;
     }
 
-    public void pay() {
+    public float getDiscount() {
+        return this.discount;
+    }
 
-        System.out.println("10 %");
+    public float pay() {
+
+        return p.getAmount() * (1 - (getDiscount() / 100));
+    }
+
+    public void viewDiscount() {
+        System.out.println("There is discount on all services by " + getDiscount());
     }
 
     public String getDiscreption() {
