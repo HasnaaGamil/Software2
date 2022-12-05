@@ -1,9 +1,19 @@
 public abstract class Payment {
-    String discreption = "UnEnitialized Payment";
+    float amount;
+
+    String discreption = "UnInitialized Payment";
 
     public String getDiscreption() {
         return discreption;
     }
+    public void setAmount(float amount)
+    {
+    	this.amount=amount;
+    }
+    public float getAmount()
+    {
+    	return this.amount;
+    }
 
-    public abstract void pay();
+    public abstract float pay();
 }
