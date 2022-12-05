@@ -29,10 +29,13 @@ public class CreditCard extends Payment {
         return expired;
     }
 
-    public void pay() {
+    public float pay() {
         if (checkExpire() == false) {
-            System.out.println("you can pay by credit card technique");
+            return getAmount();
+        } else {
+            return -1;
         }
+
     }
 
 }

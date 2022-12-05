@@ -4,8 +4,7 @@ public class Cash extends Payment {
         discreption = " Cash payment";
     }
 
-    public void pay() {
-        System.out.println("You can pay by cash technique");
+    public float pay() {
+        return getAmount();
     }
-
 }
